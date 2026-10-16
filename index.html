@@ -1,0 +1,1952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nurlaila Tahawan | Bilingual L1 Technical Support & Data Operations</title>
+  <meta name="description" content="Portfolio of Nurlaila Tahawan - Bilingual L1 Technical Support Engineer, SQL practitioner, and remote SaaS specialist based in Thailand.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #111827;
+      --bg-card-hover: #1f2937;
+      --border-color: #1e293b;
+      --border-focus: #3b82f6;
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.25);
+      --emerald: #10b981;
+      --emerald-glow: rgba(16, 185, 129, 0.2);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Background Glow Effects */
+    .bg-glow-1 {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-glow-2 {
+      position: absolute;
+      top: 600px;
+      left: -150px;
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navigation - Slim, Non-Intrusive Webflow/Stripe Style (56px) */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(11, 15, 25, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+      gap: 16px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.4px;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, #3b82f6, #10b981);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .logo-tag {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-weight: 500;
+      padding-left: 8px;
+      border-left: 1px solid var(--border-color);
+      font-family: var(--font-mono);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    nav a:hover {
+      color: var(--text-main);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn-nav-cv {
+      background: rgba(56, 189, 248, 0.12);
+      color: #38bdf8 !important;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      font-size: 0.82rem;
+      font-weight: 700 !important;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-cv:hover {
+      background: #38bdf8;
+      color: #0b0f19 !important;
+      box-shadow: 0 2px 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-nav-contact {
+      background: #1e293b;
+      color: #f8fafc !important;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      font-size: 0.82rem;
+      font-weight: 600 !important;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-contact:hover {
+      background: #334155;
+      color: white !important;
+      border-color: #64748b;
+    }
+
+    /* Hero Section - Compact, Proportioned for Notebooks & Laptops */
+    .hero {
+      padding: 44px 0 32px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34d399;
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: #10b981;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin-bottom: 24px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 26px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 9px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 14px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-main);
+      padding: 10px 20px;
+      border-radius: 9px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-color);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: #3b82f6;
+    }
+
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .metric-card {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 14px 18px;
+    }
+
+    .metric-val {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #38bdf8;
+      font-family: var(--font-mono);
+      margin-bottom: 2px;
+    }
+
+    .metric-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 70px 0;
+      scroll-margin-top: 80px;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-tag {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #3b82f6;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 680px;
+    }
+
+    /* Story Card */
+    .story-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .story-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 16px;
+      color: var(--text-main);
+    }
+
+    .story-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    .story-quote {
+      border-left: 3px solid #10b981;
+      padding-left: 16px;
+      font-style: italic;
+      color: #94a3b8;
+      background: rgba(16, 185, 129, 0.05);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 20px 0;
+    }
+
+    .story-img-container {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #000;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .story-img-container img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .story-img-container:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Interactive Diagnostic Sandbox */
+    .sandbox-container {
+      background: #080d1a;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+    }
+
+    .sandbox-tabs {
+      display: flex;
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      padding: 6px 12px;
+      gap: 8px;
+    }
+
+    .sandbox-tab {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 10px 18px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sandbox-tab.active {
+      background: #1e293b;
+      color: #38bdf8;
+    }
+
+    .sandbox-body {
+      padding: 24px;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+    }
+
+    .terminal-window {
+      background: #040812;
+      border: 1px solid #172033;
+      border-radius: 10px;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      padding: 18px;
+      color: #e2e8f0;
+      min-height: 220px;
+    }
+
+    .prompt-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      color: #94a3b8;
+    }
+
+    .prompt-sign {
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    .command-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .cmd-btn {
+      background: #1e293b;
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 7px 14px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cmd-btn:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    .sql-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 0.82rem;
+    }
+
+    .sql-table th, .sql-table td {
+      border: 1px solid #1e293b;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .sql-table th {
+      background: #0f172a;
+      color: #38bdf8;
+    }
+
+    .sql-table td {
+      color: #cbd5e1;
+    }
+
+    .badge-error {
+      background: rgba(239, 68, 68, 0.2);
+      color: #f87171;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .badge-ok {
+      background: rgba(16, 185, 129, 0.2);
+      color: #34d399;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+
+    .skill-card:hover {
+      border-color: #3b82f6;
+      transform: translateY(-3px);
+    }
+
+    .skill-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+      background: rgba(59, 130, 246, 0.1);
+      color: #38bdf8;
+    }
+
+    .skill-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .skill-list {
+      list-style: none;
+    }
+
+    .skill-list li {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skill-list li::before {
+      content: "•";
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    /* Projects & Notion Case Studies Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    .project-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .project-box:hover {
+      border-color: #3b82f6;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .project-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+      font-family: var(--font-mono);
+    }
+
+    .project-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .project-code-box {
+      background: #060a14;
+      border: 1px solid #1e293b;
+      border-radius: 8px;
+      padding: 12px;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+      overflow-x: auto;
+      line-height: 1.5;
+    }
+
+    .btn-notion {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1e293b;
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .btn-notion:hover {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    /* Certifications Filter Buttons */
+    .cert-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+
+    .cert-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 8px 20px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .cert-filter-btn:hover, .cert-filter-btn.active {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+    }
+
+    /* Certifications Grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .cert-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card:hover {
+      border-color: #38bdf8;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .cert-thumb {
+      height: 190px;
+      background: #0f172a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .cert-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .cert-card:hover .cert-thumb img {
+      transform: scale(1.04);
+    }
+
+    .cert-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(11, 15, 25, 0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: #93c5fd;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .cert-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cert-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cert-issuer {
+      color: #10b981;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .cert-desc {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    /* Modal Lightbox */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      max-width: 900px;
+      max-height: 90vh;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      overflow-y: auto;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .modal-img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+      background: #030712;
+    }
+
+    .modal-caption {
+      padding: 18px 24px;
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-weight: 600;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Contact Box */
+    .contact-box {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+      border: 1px solid #334155;
+      border-radius: 20px;
+      padding: 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .contact-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      padding: 12px 22px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .contact-item:hover {
+      border-color: #38bdf8;
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    .signature-area {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .signature-area img {
+      max-width: 170px;
+      filter: invert(1) brightness(1.2);
+      opacity: 0.85;
+    }
+
+    .signature-label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 30px 0;
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+
+    /* Laptop & Notebook Optimization (Viewports <= 1120px) */
+    @media (max-width: 1120px) {
+      .nav-wrapper {
+        height: 54px;
+        gap: 12px;
+      }
+      .logo-tag {
+        display: none;
+      }
+      nav ul {
+        gap: 14px;
+      }
+      nav a {
+        font-size: 0.84rem;
+      }
+      .btn-nav-cv, .btn-nav-contact {
+        padding: 5px 12px;
+        font-size: 0.8rem;
+      }
+      .hero {
+        padding: 36px 0 24px;
+      }
+      .hero-title {
+        font-size: 2.35rem;
+      }
+      .hero-subtitle {
+        font-size: 1.02rem;
+      }
+    }
+
+    /* Screen height optimizations for notebooks (typically 768px - 850px height) */
+    @media (max-height: 850px) and (min-width: 769px) {
+      .nav-wrapper {
+        height: 52px;
+      }
+      .hero {
+        padding: 28px 0 20px;
+      }
+      .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+      }
+      .hero-subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 18px;
+        line-height: 1.5;
+      }
+      .hero-cta {
+        margin-bottom: 20px;
+        gap: 10px;
+      }
+      .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 0.88rem;
+      }
+      .hero-metrics {
+        margin-top: 14px;
+        padding-top: 14px;
+        gap: 10px;
+      }
+      .metric-card {
+        padding: 10px 14px;
+      }
+      .metric-val {
+        font-size: 1.2rem;
+      }
+      .metric-label {
+        font-size: 0.78rem;
+      }
+    }
+
+    /* Mobile Devices (<= 768px) */
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        height: 52px;
+      }
+      .logo-tag {
+        display: none;
+      }
+      nav ul {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+      .story-card {
+        grid-template-columns: 1fr;
+      }
+      .contact-box {
+        padding: 30px 20px;
+      }
+    }
+
+    /* Clean Notion Button & Webflow 2025 Aesthetics */
+    .btn-notion {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #f1f5f9;
+      padding: 9px 18px;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.22s ease;
+    }
+
+    .btn-notion:hover {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: #38bdf8;
+      color: #38bdf8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px rgba(56, 189, 248, 0.25);
+    }
+
+    .notion-icon-svg {
+      width: 17px;
+      height: 17px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-glow-1"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- Header (Slim, modern, non-intrusive on notebook & laptop) -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <span class="logo-badge">NT</span>
+        <span>Nurlaila Tahawan</span>
+        <span class="logo-tag">L1 Tech Support &amp; Data</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#demos">Diagnostics</a></li>
+          <li><a href="#projects">Case Studies</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certs">Certificates</a></li>
+          <li><a href="#about">Story</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="Nurlaila_Tahawan_CV.pdf" target="_blank" class="btn-nav-cv">
+          <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>CV (PDF) ↗</span>
+        </a>
+        <a href="#contact" class="btn-nav-contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        <span>Ready for 100% Remote Work | APAC / Thailand Timezone (UTC+7)</span>
+      </div>
+      <h1 class="hero-title">
+        Bilingual <span>Technical Support (L1)</span> & Data Operations
+      </h1>
+      <p class="hero-subtitle">
+        B.Ed. English Education (YRU) with verified technical training from <strong>DataRockie Data Science Bootcamp (Scholarship Awardee, Top 20% Rank)</strong>. Certified <strong>EF SET CEFR B2 (Speaking C2 Proficient - 73/100)</strong> combined with relational <strong>SQL database querying</strong> (5-table joins) and reproducible reporting in <strong>R Markdown</strong>. Disciplined, calm, and ready for high-queue remote coverage for global SaaS users.
+      </p>
+
+      <div class="hero-cta">
+        <a href="Nurlaila_Tahawan_CV.pdf" class="btn-primary" target="_blank">
+          <svg style="width: 15px; height: 15px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          <span>Download CV (PDF)</span>
+        </a>
+        <a href="#demos" class="btn-secondary">
+          <span>⚡ Live Diagnostics Sandbox</span>
+        </a>
+        <a href="#projects" class="btn-secondary">
+          <svg class="notion-icon-svg" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+          <span>Notion Projects (5)</span>
+        </a>
+        <a href="#certs" class="btn-secondary">
+          <span>🎓 Verified Certs</span>
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>📬 Contact</span>
+        </a>
+      </div>
+
+      <div class="hero-metrics">
+        <div class="metric-card">
+          <div class="metric-val">CEFR B2 / C2</div>
+          <div class="metric-label">Speaking C2 (73/100) • Global Support</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">SQL & R Data</div>
+          <div class="metric-label">5-Table Joins & Reproducible Reports</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">Top 20% Scholar</div>
+          <div class="metric-label">DataRockie Bootcamp Batch 12</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-val">100% Remote</div>
+          <div class="metric-label">Satun, Thailand (UTC+7) • Fiber Optic Ready</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Authentic Journey / Story -->
+    <section id="about">
+      <div class="section-header">
+        <span class="section-tag">Authentic Background</span>
+        <h2 class="section-title">The Journey into Tech Support</h2>
+        <p class="section-desc">From pedagogical empathy to data-driven technical triage — how family inspiration and disciplined self-study shaped my path.</p>
+      </div>
+
+      <div class="story-card">
+        <div class="story-content">
+          <h3>"If you build your skills, you can work remotely."</h3>
+          <p>
+            My sister, who works in IT, was the one who first opened my eyes to the world of remote technology work. Her advice stayed with me: if I committed to continuous learning and technical mastery, I could build a career supporting global users from anywhere.
+          </p>
+          <div class="story-quote">
+            "Alhamdulillah, I started with zero coding background. Through structured discipline, I practiced typing code step-by-step and earned a scholarship for the Data Science Bootcamp at DataRockie School."
+          </div>
+          <p>
+            My background in <strong>English Education</strong> taught me the most crucial support skill of all: <em>active listening, patience, and translating technical details into clear, reassuring words.</em> Combined with SQL and terminal fundamentals, I'm ready to handle heavy ticket queues with grit and care.
+          </p>
+        </div>
+        <div class="story-img-container" onclick="openModal('images/datarockie_scholarship_story.png', 'Nurlaila\'s Tech Story & DataRockie Scholarship Blog Post')">
+          <img src="images/datarockie_scholarship_story.png" alt="DataRockie Bootcamp Story and Certificates">
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Diagnostic Sandbox -->
+    <section id="demos">
+      <div class="section-header">
+        <span class="section-tag">Hands-On Proof of Skills</span>
+        <h2 class="section-title">Interactive Support Sandbox</h2>
+        <p class="section-desc">Click the simulated diagnostic actions below to see how I inspect database records and parse server error logs during an L1 triage incident.</p>
+      </div>
+
+      <div class="sandbox-container">
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" onclick="switchTab('sql-tab', this)">🗄️ SQL Database Triage</button>
+          <button class="sandbox-tab" onclick="switchTab('bash-tab', this)">💻 Terminal & Log Grep</button>
+          <button class="sandbox-tab" onclick="switchTab('sla-tab', this)">🎫 L1 SLA & Ticket Workflow</button>
+        </div>
+
+        <div class="sandbox-body">
+          <!-- SQL Tab -->
+          <div id="sql-tab" class="tab-pane active">
+            <div class="command-buttons">
+              <button class="cmd-btn" onclick="runSqlQuery('account')">▶ Query 1: Verify Account Status</button>
+              <button class="cmd-btn" onclick="runSqlQuery('failed_orders')">▶ Query 2: Inspect Failed Transactions</button>
+              <button class="cmd-btn" onclick="runSqlQuery('error_summary')">▶ Query 3: Aggregate 24h Error Codes</button>
+            </div>
+            <div class="terminal-window" id="sql-output">
+              <div class="prompt-row">
+                <span class="prompt-sign">saas_db=#</span>
+                <span>SELECT u.id, u.email, u.company_name, u.plan, u.status FROM users u WHERE u.email = 'enterprise.client@globex.com';</span>
+              </div>
+              <table class="sql-table">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>email</th>
+                    <th>company_name</th>
+                    <th>plan</th>
+                    <th>status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>10492</td>
+                    <td>enterprise.client@globex.com</td>
+                    <td>Globex International</td>
+                    <td>Enterprise Platinum</td>
+                    <td><span class="badge-ok">ACTIVE</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(1 row in 0.04ms) - Account validated. Ready for escalation verification.</div>
+            </div>
+          </div>
+
+          <!-- Bash Tab -->
+          <div id="bash-tab" class="tab-pane">
+            <div class="command-buttons">
+              <button class="cmd-btn" onclick="runBashCmd('tail')">▶ tail -n 5 /var/log/nginx/access.log</button>
+              <button class="cmd-btn" onclick="runBashCmd('grep500')">▶ grep -i "500 Internal" /var/log/app.log | head -n 3</button>
+              <button class="cmd-btn" onclick="runBashCmd('curl')">▶ curl -I https://api.saasapp.com/health</button>
+            </div>
+            <div class="terminal-window" id="bash-output">
+              <div class="prompt-row">
+                <span class="prompt-sign">support@runner-01:~$</span>
+                <span>tail -n 5 /var/log/nginx/access.log</span>
+              </div>
+              <div style="color: #94a3b8; line-height: 1.8;">
+                [2026-10-14 20:14:02] 198.51.100.24 "GET /v1/organizations/10492/billing HTTP/1.1" 200 4122<br>
+                [2026-10-14 20:14:05] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+                [2026-10-14 20:14:09] 203.0.113.88 "GET /v1/dashboard/metrics HTTP/1.1" 200 8920<br>
+                [2026-10-14 20:14:12] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+                [2026-10-14 20:14:15] 203.0.113.88 "GET /v1/users/me HTTP/1.1" 200 1204
+              </div>
+              <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Diagnostic Note]: 500 status code isolated to /v1/integrations/webhook/sync endpoint for tenant ID 10492. Reproduction steps documented for L2 Engineering.</div>
+            </div>
+          </div>
+
+          <!-- SLA Tab -->
+          <div id="sla-tab" class="tab-pane">
+            <div style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.8;">
+              <h4 style="color: #38bdf8; margin-bottom: 8px;">My High-Volume L1 Ticket Resolution Process:</h4>
+              <ol style="padding-left: 20px; margin-bottom: 14px;">
+                <li><strong>Rapid First Response (&lt;15 mins):</strong> Acknowledge receipt in empathetic English, rephrase the customer's problem to confirm understanding.</li>
+                <li><strong>Variable Isolation:</strong> Verify whether the issue is tenant-specific, credential-related, or platform-wide via status dashboards.</li>
+                <li><strong>Database & Log Inspection:</strong> Check database state via SQL and query error codes in terminal logs.</li>
+                <li><strong>Clean L2 Escalation:</strong> If a backend bug is confirmed, package account ID, timestamp, HAR file, and reproduction steps in Jira so engineers don't waste time re-asking.</li>
+                <li><strong>High Queue Stamina:</strong> Maintain focus through 50+ tickets/day with organized macros and calm professionalism.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Technical Case Studies on Notion -->
+    <section id="projects">
+      <div class="section-header">
+        <span class="section-tag">Verified Coursework & Proof of Work</span>
+        <h2 class="section-title">Live Technical Case Studies (Notion)</h2>
+        <p class="section-desc">Real hands-on assignments and projects completed during my technical training, featuring relational database joins, regex parsing, and dynamic queries.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Built a report with R (New!) -->
+        <div class="project-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="project-tag" style="color: #c084fc; background: rgba(168, 85, 247, 0.12);">R Markdown • knitr • Automated Reports</span>
+              <span style="font-size: 0.78rem; color: #94a3b8; display: inline-flex; align-items: center; gap: 4px;"><svg class="notion-icon-svg" style="width: 13px; height: 13px; fill: #94a3b8;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg> Notion</span>
+            </div>
+            <h3 class="project-title">Built a Report with R</h3>
+            <p class="project-desc">
+              การสร้างระบบรายงานทางเทคนิคและสถิติข้อมูลอัตโนมัติแบบ Reproducible Reports ด้วย R Markdown และ ggplot2 สามารถแปลงชุดข้อมูลดิบเป็นเอกสารรายงานสรุปผล HTML/PDF ที่สวยงาม พร้อมวิเคราะห์แนวโน้มปัญหาได้อย่างเป็นระบบ
+            </p>
+            <div class="project-code-box">
+---<br>
+title: "Technical Incident & SLA Report"<br>
+output: html_document<br>
+---<br>
+library(dplyr); library(ggplot2)<br>
+sla_summary &lt;- support_logs %&gt;%<br>
+&nbsp;&nbsp;filter(status == "RESOLVED") %&gt;%<br>
+&nbsp;&nbsp;group_by(tier) %&gt;% summarise(avg_mins = mean(duration))
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Built-a-report-with-R-3f97c0a9a17a8022becdf1417a17a8d7" target="_blank" class="btn-notion">
+            <svg class="notion-icon-svg" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+            <span>Open "Built a report with R" on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 2: Data Analyst Portfolio - DataRockie School (New!) -->
+        <div class="project-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="project-tag" style="color: #34d399; background: rgba(16, 185, 129, 0.12);">Data Analyst • DataRockie • Top 20% Rank</span>
+              <span style="font-size: 0.78rem; color: #94a3b8; display: inline-flex; align-items: center; gap: 4px;"><svg class="notion-icon-svg" style="width: 13px; height: 13px; fill: #94a3b8;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg> Notion</span>
+            </div>
+            <h3 class="project-title">Data Analyst Portfolio (DataRockie)</h3>
+            <p class="project-desc">
+              แฟ้มผลงานนักวิเคราะห์ข้อมูลและนักเรียนทุน Data Science Bootcamp รุ่น 12 ครอบคลุมการเขียนโค้ดวิเคราะห์ข้อมูล 100+ ชั่วโมง สอบผ่านข้อสอบวัดผล 240 ข้อ ติดอันดับ Top 20% ผสานการใช้ SQL, Spreadsheets, R และพื้นฐาน Python
+            </p>
+            <div class="project-code-box">
+-- DataRockie Comprehensive Analytics Pipeline<br>
+SELECT cohort, COUNT(student_id) AS total_students,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AVG(evaluation_score) AS avg_score,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERCENTILE_CONT(0.80) WITHIN GROUP (ORDER BY score) AS top_tier<br>
+FROM datarockie_bootcamp_batch12 GROUP BY cohort;
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Data-Analyst-DataRockie-School-3fa7c0a9a17a8051b0fac25acbe5ae64" target="_blank" class="btn-notion">
+            <svg class="notion-icon-svg" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+            <span>Open Data Analyst Portfolio on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 3: Chinook Database -->
+        <div class="project-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="project-tag">SQL Database • 5-Table Joins</span>
+              <span style="font-size: 0.78rem; color: #94a3b8; display: inline-flex; align-items: center; gap: 4px;"><svg class="notion-icon-svg" style="width: 13px; height: 13px; fill: #94a3b8;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg> Notion</span>
+            </div>
+            <h3 class="project-title">Chinook Database SQL Analysis</h3>
+            <p class="project-desc">
+              Relational query analysis mapping high-spending customer accounts directly to assigned sales and support representatives via <code>SupportRepId</code>. Conducted multi-table joins across 5 tables with aggregations and filtering.
+            </p>
+            <div class="project-code-box">
+SELECT c.CustomerId, c.FirstName || ' ' || c.LastName AS Customer_Name,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.FirstName || ' ' || e.LastName AS Support_Rep, SUM(i.Total) AS Total_Spent<br>
+FROM customers c<br>
+INNER JOIN invoices i ON c.CustomerId = i.CustomerId<br>
+INNER JOIN employees e ON c.SupportRepId = e.EmployeeId<br>
+GROUP BY c.CustomerId, Customer_Name, Support_Rep<br>
+ORDER BY Total_Spent DESC LIMIT 5;
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Queery-Chinook-Database-3f87c0a9a17a8098a683e490efeffa55" target="_blank" class="btn-notion">
+            <svg class="notion-icon-svg" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+            <span>Open Chinook SQL Case Study ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 4: ID Card Parser & Regex -->
+        <div class="project-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="project-tag">Regex • Data Cleaning • Normalization</span>
+              <span style="font-size: 0.78rem; color: #94a3b8; display: inline-flex; align-items: center; gap: 4px;"><svg class="notion-icon-svg" style="width: 13px; height: 13px; fill: #94a3b8;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg> Notion</span>
+            </div>
+            <h3 class="project-title">Text Parser & Thai-to-EN Date Normalizer</h3>
+            <p class="project-desc">
+              Extracted structured identification numbers, names, and addresses from unstructured messy string blobs using Regular Expressions. Formulated date normalization logic converting Thai Buddhist Era dates into standard international ISO format.
+            </p>
+            <div class="project-code-box">
+=REGEXEXTRACT(raw_text, "\d{13}")<br>
+=REGEXMATCH(text, "^[PM]")<br>
+=REGEXREPLACE(thai_date, "(\d{2})\s+([^\s]+)\s+(\d{4})", ...)<br>
+-- Cleaned messy client inputs into structured ISO records
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Project-ID-Card-Parser-TH-to-EN-Date-3ec7c0a9a17a80b39f56eb9efa1382f8" target="_blank" class="btn-notion">
+            <svg class="notion-icon-svg" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+            <span>Open Regex Breakdown on Notion ↗</span>
+          </a>
+        </div>
+
+        <!-- Project 5: Dynamic Query & Boolean Logic -->
+        <div class="project-box">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span class="project-tag">Dynamic Query • Boolean Precedence</span>
+              <span style="font-size: 0.78rem; color: #94a3b8; display: inline-flex; align-items: center; gap: 4px;"><svg class="notion-icon-svg" style="width: 13px; height: 13px; fill: #94a3b8;" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg> Notion</span>
+            </div>
+            <h3 class="project-title">Dynamic Querying & Logic Precedence</h3>
+            <p class="project-desc">
+              Engineered dynamic data filtering models with dropdown inputs. Solved critical boolean operator precedence rules <code>(A OR B) AND C</code> to prevent logic leakage during data extraction and sales reporting.
+            </p>
+            <div class="project-code-box">
+=QUERY(Sale_Transactions, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"SELECT A, B, C, D, H WHERE (D='West' OR D='South') AND H >= 1000")<br>
+-- Enforced boolean parentheses precedence to isolate accurate records
+            </div>
+          </div>
+          <a href="https://chip-curler-7a4.notion.site/Easy-Hardcode-Dynamic-Query-3ec7c0a9a17a808dab83eabfa9d8398a" target="_blank" class="btn-notion">
+            <svg class="notion-icon-svg" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.55c-.42-.326-.98-.7-2.054-.607L3.48 2.064c-.42.047-.514.327-.374.513zm.607 3.313v13.626c0 .653.373.886 1.026.84l14.195-.84c.653-.046.746-.513.746-1.026V6.447c0-.513-.233-.746-.746-.7l-14.475.84c-.56.046-.746.326-.746.933zm13.122 1.493c.093.373 0 .746-.374.793l-.84.14v8.586c-.42.233-.886.373-1.353.373-.747 0-1.12-.28-1.587-.84l-4.76-7.373v7.047l1.4.326c.047.373-.186.746-.56.746l-3.92.233c-.093-.373.094-.746.467-.793l1.027-.233V9.754l-1.307-.14c-.093-.373.14-.746.513-.746l3.967-.234 5.04 7.654v-6.72l-1.213-.14c-.094-.373.186-.746.56-.746z"/></svg>
+            <span>Open Dynamic Query Guide on Notion ↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Skills Matrix -->
+    <section id="skills">
+      <div class="section-header">
+        <span class="section-tag">Capabilities</span>
+        <h2 class="section-title">Core Skills & Tooling</h2>
+        <p class="section-desc">Grounded technical skills developed through intensive bootcamp training and daily practical application.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🌐</div>
+          <h3 class="skill-title">Language & Comms</h3>
+          <ul class="skill-list">
+            <li>Fluent English (Verbal & Written)</li>
+            <li>Native Thai</li>
+            <li>Cross-cultural client empathy</li>
+            <li>De-escalation & patient guidance</li>
+            <li>Technical documentation writing</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <h3 class="skill-title">Databases & SQL</h3>
+          <ul class="skill-list">
+            <li>SELECT, WHERE, ORDER BY, LIMIT</li>
+            <li>Multi-table INNER / LEFT JOINs</li>
+            <li>GROUP BY, HAVING, Aggregations</li>
+            <li>Diagnosing missing or corrupt records</li>
+            <li>SQLite, PostgreSQL query syntax</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3 class="skill-title">Scripting & CLI (Learning)</h3>
+          <ul class="skill-list">
+            <li>Bash terminal navigation & file checks</li>
+            <li>Grep, tail -f, head log parsing</li>
+            <li>Python syntax & basic automation</li>
+            <li>Git version control basics</li>
+            <li>REST API testing (curl basics)</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3 class="skill-title">Data & Support Tools</h3>
+          <ul class="skill-list">
+            <li>Google Sheets & Excel formulas</li>
+            <li>SQL Database Querying (JOINs & Triage)</li>
+            <li>Microsoft Office (Word & PowerPoint)</li>
+            <li>Ticketing / SLA workflows</li>
+            <li>Canva visual communications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Bilingual Portfolio Spotlight -->
+    <section id="portfolio-spotlight" style="margin-bottom: 70px;">
+      <div class="section-header">
+        <span class="section-tag" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border-color: rgba(168, 85, 247, 0.3);">Featured Showcase</span>
+        <h2 class="section-title">Portfolio — Ms. Nurlaila Tahawan</h2>
+        <p class="section-desc">Bilingual English Teaching, Classroom Action Research, Pronunciation Coaching & International Coordination.</p>
+      </div>
+
+      <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.85) 100%); border: 1px solid rgba(168, 85, 247, 0.3); border-radius: 18px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; align-items: center;">
+        <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.12); cursor: pointer; max-height: 480px; background: #000;" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')">
+          <img src="images/portfolio_ms_nurlaila_tahawan_preview.jpg" alt="Portfolio - Ms. Nurlaila Tahawan" style="width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.3s ease;">
+          <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.85)); padding: 14px; text-align: center; color: #38bdf8; font-weight: 600; font-size: 0.88rem;">
+            🔍 Click to Expand Full Infographic (6,198 × 15,949 px)
+          </div>
+        </div>
+        <div>
+          <span style="display: inline-block; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 600; margin-bottom: 12px;">English Teaching & Community Leadership</span>
+          <h3 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 12px; color: #f8fafc;">"Don't fear using English — Let's make it fun!"</h3>
+          <p style="color: #94a3b8; font-size: 0.94rem; line-height: 1.7; margin-bottom: 16px;">
+            Official visual portfolio demonstrating cross-cultural communication, empathetic coaching, and leadership:
+          </p>
+          <ul style="list-style: none; padding: 0; margin-bottom: 22px; color: #cbd5e1; font-size: 0.88rem; line-height: 1.8;">
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>📖</span> <div><strong>Classroom Action Research:</strong> English Phonics spelling and reading development using targeted Flashcard techniques at Ban Yantakuan School.</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🗣️</span> <div><strong>Practical Pedagogy:</strong> Pronunciation drills, interactive letter games, listening comprehension, and active English conversation workshops.</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🌏</span> <div><strong>Cross-Cultural Coordination:</strong> Welcoming Indonesian exchange students & teachers; conversation tutoring at Center of Languages and ASEAN Studies (CLI).</div></li>
+            <li style="display: flex; gap: 8px; margin-bottom: 8px;"><span>🎯</span> <div><strong>Tournament Operations:</strong> Scorer & sports event coordinator for Betong Festival & YRU Archery Club.</div></li>
+          </ul>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn-primary" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')" style="padding: 10px 18px; font-size: 0.88rem; cursor: pointer;">
+              <span>🔍 View Full Portfolio Modal</span>
+            </button>
+            <a href="images/portfolio_ms_nurlaila_tahawan.jpg" target="_blank" class="btn-secondary" style="padding: 10px 18px; font-size: 0.88rem;">
+              <span>↗ Open Hi-Res (New Tab)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials & Certifications Gallery -->
+    <section id="certs">
+      <div class="section-header">
+        <span class="section-tag">Verified Credentials</span>
+        <h2 class="section-title">Certifications & Official Awards</h2>
+        <p class="section-desc">Click any certificate below to inspect the verified high-resolution document.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="cert-filters">
+        <button class="cert-filter-btn active" onclick="filterCerts('all', this)">All Credentials (14)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('tech', this)">💻 Computer & Technical (8)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('english', this)">🌐 English & CEFR (3)</button>
+        <button class="cert-filter-btn" onclick="filterCerts('leadership', this)">🤝 Leadership & Volunteer (3)</button>
+      </div>
+
+      <div class="certs-grid">
+        <!-- 1. DataRockie Bootcamp Batch 12 -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_datarockie_bootcamp12.png', 'Official Electronic Certificate - Data Science Bootcamp Batch 12 (Top 20% Rank, Cert ID: 560b1fe0-3a78-490f-8188-3077e2c890c9)')">
+          <div class="cert-thumb">
+            <img src="images/cert_datarockie_bootcamp12.png" alt="DataRockie Batch 12 Certificate">
+            <span class="cert-badge" style="color: #34d399; border-color: rgba(16, 185, 129, 0.4);">Top 20% Mastered</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Data Science Bootcamp (Batch 12)</h3>
+              <p class="cert-issuer">The School of Generalist / DataRockie</p>
+              <p class="cert-desc">240 assessment questions • 100+ learning hours • Top 20% ranking. Skills: SQL, Python, R, Spreadsheets, Automation. <a href="https://theschoolofgeneralist.com/cert/560b1fe0-3a78-490f-8188-3077e2c890c9" target="_blank" style="color: #38bdf8; text-decoration: underline;">Verify Credential ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SQL Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_sql_crash_course.png', 'Certificate of Completion: SQL Crash Course - DataRockie School (Cert No: cert_650yhcyI)')">
+          <div class="cert-thumb">
+            <img src="images/cert_sql_crash_course.png" alt="SQL Crash Course Certificate">
+            <span class="cert-badge" style="color: #60a5fa; border-color: rgba(96, 165, 250, 0.4);">SQL Certified</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">SQL Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Relational database querying, multi-table JOINs, data filtering, aggregations, and support diagnostic queries. Cert No: <code>cert_650yhcyI</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Google Sheets Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_googlesheets_crash_course.png', 'Certificate of Completion: Google Sheets Crash Course - DataRockie School (Cert No: cert_0z932crs)')">
+          <div class="cert-thumb">
+            <img src="images/cert_googlesheets_crash_course.png" alt="Google Sheets Crash Course Certificate">
+            <span class="cert-badge" style="color: #34d399; border-color: rgba(52, 211, 153, 0.4);">Spreadsheets</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Google Sheets Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Advanced spreadsheet formulas, data cleaning, automated reporting, and customer issue tracking. Cert No: <code>cert_0z932crs</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. R Programming Crash Course Certificate -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_r_crash_course.png', 'Certificate of Completion: R Crash Course - DataRockie School (Cert No: cert_z8cpdfsm)')">
+          <div class="cert-thumb">
+            <img src="images/cert_r_crash_course.png" alt="R Crash Course Certificate">
+            <span class="cert-badge" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">R Programming</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">R Programming Crash Course</h3>
+              <p class="cert-issuer">DataRockie School (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">Data manipulation, statistical analysis scripts, reproducible markdown reports, and data visualization. Cert No: <code>cert_z8cpdfsm</code>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Microsoft Word 2013 ขั้นสูง -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_ms_word.jpg', 'ใบประกาศนียบัตร: หลักสูตรวิชา Microsoft Word 2013 ขั้นสูง (18 ชั่วโมง) - โรงเรียนวิทยพัฒน์ หาดใหญ่ (เลขที่ 5714735)')">
+          <div class="cert-thumb">
+            <img src="images/cert_ms_word.jpg" alt="Microsoft Word Certificate">
+            <span class="cert-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">MS Word Advanced</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Microsoft Word 2013 ขั้นสูง</h3>
+              <p class="cert-issuer">โรงเรียนวิทยพัฒน์ (WITAYAPUT) หาดใหญ่</p>
+              <p class="cert-desc">สำเร็จหลักสูตรการจัดทำเอกสารขั้นสูง การจัดรูปแบบระบบ ฟอร์มมาตรฐาน และการจัดทำคู่มือ 18 ชั่วโมง (เลขที่ 5714735).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Microsoft PowerPoint -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_ms_powerpoint.jpg', 'เกียรติบัตร: หลักสูตรเรียนรู้โปรแกรมนำเสนอผลงานโดย PowerPoint - องค์การบริหารส่วนจังหวัดสตูล ร่วมกับ โรงเรียนไทยคอม')">
+          <div class="cert-thumb">
+            <img src="images/cert_ms_powerpoint.jpg" alt="Microsoft PowerPoint Certificate">
+            <span class="cert-badge" style="color: #fb923c; border-color: rgba(251, 146, 60, 0.4);">MS PowerPoint</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">โปรแกรมนำเสนอผลงาน PowerPoint</h3>
+              <p class="cert-issuer">อบจ.สตูล ร่วมกับ โรงเรียนไทยคอม</p>
+              <p class="cert-desc">สำเร็จหลักสูตรการออกแบบและนำเสนอผลงานคอมพิวเตอร์เพื่อการสื่อสารข้อมูลที่มีประสิทธิภาพ (ใบอนุญาตเลขที่ สข 2.170/2549).</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Web Development & Tech Blog -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/cert_web_development.png', 'Portfolio & Technical Blogging Platform (WordPress & R Markdown) - nurlailatahawan.wordpress.com')">
+          <div class="cert-thumb">
+            <img src="images/cert_web_development.png" alt="Web Development & Technical Blog">
+            <span class="cert-badge" style="color: #f472b6; border-color: rgba(244, 114, 182, 0.4);">Web & Tech Blog</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Personal Website & Tech Blog</h3>
+              <p class="cert-issuer">WordPress.com & R Markdown</p>
+              <p class="cert-desc">การพัฒนาเว็บไซต์พอร์ตโฟลิโอส่วนตัวและเก็บบันทึก Technical Articles เกี่ยวกับ R Markdown, SQL และเส้นทางการเรียนรู้ Data/Tech. <a href="https://nurlailatahawan.wordpress.com/" target="_blank" style="color: #38bdf8; text-decoration: underline;">Visit Blog ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. DataRockie Scholarship Story -->
+        <div class="cert-card" data-cat="tech" onclick="openModal('images/datarockie_scholarship_story.png', 'Data Science Bootcamp Batch 12 Scholarship & Learning Journey - DataRockie')">
+          <div class="cert-thumb">
+            <img src="images/datarockie_scholarship_story.png" alt="DataRockie Scholarship Story">
+            <span class="cert-badge" style="color: #fbbf24; border-color: rgba(251, 191, 36, 0.4);">Full Scholarship</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Bootcamp Scholarship Story</h3>
+              <p class="cert-issuer">DataRockie (Kasidis Satangmongkol)</p>
+              <p class="cert-desc">ได้รับคัดเลือกทุนการศึกษา 100+ ชั่วโมง ครอบคลุม SQL, Data Transformation, Python, Bash และการนำความรู้มาประยุกต์ใช้งานจริงในสาย Technical Support.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. US Embassy Appreciation -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_usembassy.jpg', 'Certificate of Appreciation - U.S. Embassy Bangkok (American Corner Yala)')">
+          <div class="cert-thumb">
+            <img src="images/cert_usembassy.jpg" alt="US Embassy Certificate">
+            <span class="cert-badge">U.S. Embassy Bangkok</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Certificate of Appreciation</h3>
+              <p class="cert-issuer">U.S. Embassy Bangkok (American Corner)</p>
+              <p class="cert-desc">Awarded by Assistant Cultural Affairs Officer Deb Mak in recognition of bilingual volunteering and cross-cultural coordination.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. YRU Archery -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_yru_archery.png', 'YRU Archery Club Certificate - นูรไลลา ตะฮาวัน (Vice President & Tournament Coordinator)')">
+          <div class="cert-thumb">
+            <img src="images/cert_yru_archery.png" alt="YRU Archery Club Certificate">
+            <span class="cert-badge">YRU Archery Club</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Leadership & Tournament Operations</h3>
+              <p class="cert-issuer">YRU Archery Club & Robinhood Games</p>
+              <p class="cert-desc">Official recognition for tournament organization, operations, and translating international safety rules.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. AGSA Volunteers -->
+        <div class="cert-card" data-cat="leadership" onclick="openModal('images/cert_agsa_committee.jpg', 'Assalam Graduate & Student Association (A.G.S.A) Committee Certificate')">
+          <div class="cert-thumb">
+            <img src="images/cert_agsa_committee.jpg" alt="AGSA Certificate">
+            <span class="cert-badge">A.G.S.A Association</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Association Committee Certificate</h3>
+              <p class="cert-issuer">Assalam Institute / Fatoni University</p>
+              <p class="cert-desc">Certifying committee leadership, online workshop logistics, and cross-provincial student coordination.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. EF SET English Certificate (CEFR B2 / C2 Speaking) -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/cert_cefr_efset_b2.jpg', 'Official EF SET English Certificate - นูรไลลา ตะฮาวัน (Score: 57/100, CEFR B2 Upper Intermediate, Speaking: 73/100 C2 Proficient - cert.efset.org/th/P7dEUX)')">
+          <div class="cert-thumb">
+            <img src="images/cert_cefr_efset_b2.jpg" alt="EF SET English Certificate">
+            <span class="cert-badge" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.4);">CEFR B2 • C2 Speaking</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">EF SET English Certificate (CEFR B2)</h3>
+              <p class="cert-issuer">EF Standard English Test (cert.efset.org)</p>
+              <p class="cert-desc">Score: 57/100 (B2 Upper Intermediate). Achieved <strong>C2 Proficient</strong> level in Speaking (73/100), Reading 55 (B2), Listening 52 (B2). <a href="https://cert.efset.org/th/P7dEUX" target="_blank" style="color: #38bdf8; text-decoration: underline;">Verify Credential ↗</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. YRU-TEP English Certificate (CEFR B1) -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/cert_cefr_yrutep_b1.jpg', 'YRU-TEP Certificate of Proficiency (CEFR B1) - Center of Languages and ASEAN Studies, Yala Rajabhat University (Score: 63, Student ID: 406302033)')">
+          <div class="cert-thumb">
+            <img src="images/cert_cefr_yrutep_b1.jpg" alt="YRU-TEP Certificate">
+            <span class="cert-badge" style="color: #a78bfa; border-color: rgba(167, 139, 250, 0.4);">YRU-TEP • CEFR B1</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">YRU-TEP English Proficiency (CEFR B1)</h3>
+              <p class="cert-issuer">Center of Languages & ASEAN Studies (YRU)</p>
+              <p class="cert-desc">Standardized university English proficiency assessment (Score: 63, CEFR B1 level). Certified by Asst. Prof. Dr. Sirichai Namburi, Acting President of YRU.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Portfolio - Ms. Nurlaila Tahawan -->
+        <div class="cert-card" data-cat="english" onclick="openModal('images/portfolio_ms_nurlaila_tahawan.jpg', 'Portfolio - Ms. Nurlaila Tahawan: Bilingual English Teaching, Phonics Action Research & Cross-Cultural Facilitation')">
+          <div class="cert-thumb">
+            <img src="images/portfolio_ms_nurlaila_tahawan_preview.jpg" alt="Portfolio Ms. Nurlaila Tahawan">
+            <span class="cert-badge" style="color: #ec4899; border-color: rgba(236, 72, 153, 0.4);">Bilingual Showcase</span>
+          </div>
+          <div class="cert-info">
+            <div>
+              <h3 class="cert-title">Portfolio — Ms. Nurlaila Tahawan</h3>
+              <p class="cert-issuer">Bilingual Education, YRU & Practicum Schools</p>
+              <p class="cert-desc">Comprehensive visual portfolio detailing English Phonics action research, cross-cultural coordination for Indonesian students, and archery tournament administration. <a href="images/portfolio_ms_nurlaila_tahawan.jpg" target="_blank" style="color: #38bdf8; text-decoration: underline;">View Full Hi-Res ↗</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Call to Action -->
+    <section id="contact">
+      <div class="contact-box">
+        <h2 class="contact-title">Let's Connect & Build Together</h2>
+        <p class="contact-subtitle">
+          Ready to provide reliable, bilingual L1 technical support for global enterprise customers. Fast learner, disciplined for 100% remote work, and excited to support your team.
+        </p>
+
+        <div class="contact-grid">
+          <a href="mailto:nurlaila.thw@gmail.com" class="contact-item">
+            <span>✉️</span>
+            <span>nurlaila.thw@gmail.com</span>
+          </a>
+          <button class="contact-item" onclick="copyEmail()" style="cursor: pointer; border: 1px solid #3b82f6;">
+            <span>📋</span>
+            <span id="copy-btn-text">Copy Email Address</span>
+          </button>
+          <a href="https://github.com/nurlailathw-jpg" target="_blank" class="contact-item">
+            <span>🐙</span>
+            <span>github.com/nurlailathw-jpg</span>
+          </a>
+          <a href="tel:+66807128297" class="contact-item">
+            <span>📞</span>
+            <span>+66 80 712 8297</span>
+          </a>
+          <a href="https://nurlailatahawan.wordpress.com/" target="_blank" class="contact-item">
+            <span>📝</span>
+            <span>nurlailatahawan.wordpress.com</span>
+          </a>
+        </div>
+
+        <div class="signature-area">
+          <span class="signature-label">Nurlaila Tahawan — Satun, Thailand (UTC+7)</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal Lightbox -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <img id="modal-img-tag" src="" alt="Certificate" class="modal-img">
+      <div id="modal-caption-tag" class="modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Nurlaila Tahawan. Designed for L1 Support & Technical Data Roles. Hosted with pride.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Tab Switching
+    function switchTab(tabId, element) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.sandbox-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      element.classList.add('active');
+    }
+
+    // SQL Simulation
+    function runSqlQuery(type) {
+      const output = document.getElementById('sql-output');
+      if (type === 'account') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT u.id, u.email, u.company_name, u.plan, u.status FROM users u WHERE u.email = 'enterprise.client@globex.com';</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>id</th><th>email</th><th>company_name</th><th>plan</th><th>status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>10492</td><td>enterprise.client@globex.com</td><td>Globex International</td><td>Enterprise Platinum</td><td><span class="badge-ok">ACTIVE</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(1 row in 0.04ms) - Account validated. Ready for escalation verification.</div>
+        `;
+      } else if (type === 'failed_orders') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT o.order_id, o.user_id, o.amount, o.status, o.error_reason, o.created_at FROM orders o WHERE o.user_id = 10492 ORDER BY o.created_at DESC LIMIT 3;</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>order_id</th><th>user_id</th><th>amount</th><th>status</th><th>error_reason</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ORD-99120</td><td>10492</td><td>$4,500.00</td><td><span class="badge-error">FAILED</span></td><td>Webhook Gateway Timeout (504)</td></tr>
+              <tr><td>ORD-88210</td><td>10492</td><td>$4,500.00</td><td><span class="badge-ok">SUCCESS</span></td><td>None</td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Triage]: Isolated to webhook timeout on ORD-99120. Customer can be advised while payment gateway sync is inspected.</div>
+        `;
+      } else if (type === 'error_summary') {
+        output.innerHTML = `
+          <div class="prompt-row">
+            <span class="prompt-sign">saas_db=#</span>
+            <span>SELECT error_code, COUNT(*) AS occurrences FROM api_logs WHERE created_at >= NOW() - INTERVAL '24 HOURS' GROUP BY error_code ORDER BY occurrences DESC;</span>
+          </div>
+          <table class="sql-table">
+            <thead>
+              <tr><th>error_code</th><th>occurrences</th><th>severity</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>401_UNAUTHORIZED</td><td>1,420</td><td><span class="badge-ok">Normal (Expired sessions)</span></td></tr>
+              <tr><td>404_NOT_FOUND</td><td>310</td><td><span class="badge-ok">Low</span></td></tr>
+              <tr><td>500_INTERNAL_SERVER</td><td>14</td><td><span class="badge-error">P1 Engineering Alert</span></td></tr>
+            </tbody>
+          </table>
+          <div style="margin-top: 10px; color: #64748b; font-size: 0.8rem;">(3 rows in 0.09ms) - 14 critical 500 errors identified within the last 24 hours.</div>
+        `;
+      }
+    }
+
+    // Bash Simulation
+    function runBashCmd(type) {
+      const output = document.getElementById('bash-output');
+      if (type === 'tail') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>tail -n 5 /var/log/nginx/access.log</span></div>
+          <div style="color: #94a3b8; line-height: 1.8;">
+            [2026-10-14 20:14:02] 198.51.100.24 "GET /v1/organizations/10492/billing HTTP/1.1" 200 4122<br>
+            [2026-10-14 20:14:05] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+            [2026-10-14 20:14:09] 203.0.113.88 "GET /v1/dashboard/metrics HTTP/1.1" 200 8920<br>
+            [2026-10-14 20:14:12] 198.51.100.24 "POST /v1/integrations/webhook/sync HTTP/1.1" <span class="badge-error">500</span> 318<br>
+            [2026-10-14 20:14:15] 203.0.113.88 "GET /v1/users/me HTTP/1.1" 200 1204
+          </div>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[L1 Triage]: Streaming live logs captured repeated 500 status on /v1/integrations/webhook/sync.</div>
+        `;
+      } else if (type === 'grep500') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>grep -i "500 Internal" /var/log/app.log | head -n 3</span></div>
+          <div style="color: #f87171; line-height: 1.8; font-size: 0.82rem;">
+            [ERROR] 2026-10-14T20:14:05Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.<br>
+            [ERROR] 2026-10-14T20:14:12Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.<br>
+            [ERROR] 2026-10-14T20:14:19Z worker.py:44: DatabasePoolExhausted: Max connections (100) reached during batch sync.
+          </div>
+          <div style="margin-top: 10px; color: #38bdf8; font-size: 0.8rem;">[Root Cause Isolated]: Database connection pool exhaustion. Packaged into engineering escalation ticket.</div>
+        `;
+      } else if (type === 'curl') {
+        output.innerHTML = `
+          <div class="prompt-row"><span class="prompt-sign">support@runner-01:~$</span><span>curl -I https://api.saasapp.com/health</span></div>
+          <div style="color: #cbd5e1; line-height: 1.8;">
+            HTTP/2 <span class="badge-ok">200</span><br>
+            content-type: application/json; charset=utf-8<br>
+            date: Wed, 14 Oct 2026 21:30:00 GMT<br>
+            x-response-time: 14ms<br>
+            {"status": "UP", "database": "CONNECTED", "latency": "12ms"}
+          </div>
+          <div style="margin-top: 10px; color: #10b981; font-size: 0.8rem;">[Verification]: API gateway and healthcheck endpoint responding 200 OK.</div>
+        `;
+      }
+    }
+
+    // Modal Lightbox
+    function openModal(imgSrc, captionText) {
+      document.getElementById('modal-img-tag').src = imgSrc;
+      document.getElementById('modal-caption-tag').innerHTML = captionText + ` <a href="${imgSrc}" target="_blank" style="margin-left: 12px; color: #38bdf8; text-decoration: underline; font-weight: normal; font-size: 0.85rem;">[Open Full High-Res ↗]</a>`;
+      document.getElementById('image-modal').classList.add('active');
+    }
+
+    function closeModal() {
+      document.getElementById('image-modal').classList.remove('active');
+    }
+
+    // Filter Certificates by Category
+    function filterCerts(category, element) {
+      document.querySelectorAll('.cert-filter-btn').forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+      const cards = document.querySelectorAll('.cert-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Copy Email
+    function copyEmail() {
+      navigator.clipboard.writeText('nurlaila.thw@gmail.com').then(() => {
+        const btn = document.getElementById('copy-btn-text');
+        btn.innerText = 'Copied to Clipboard! ✓';
+        setTimeout(() => {
+          btn.innerText = 'Copy Email Address';
+        }, 2500);
+      });
+    }
+  </script>
+</body>
+</html>
